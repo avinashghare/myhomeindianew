@@ -95,6 +95,23 @@
     </script>
 
 
+<script>
+        var gaPlugin;
+
+        function functionconsole(data) {
+            console.log(data);
+        }
+
+        function sendtoga(text) {
+            if (window.plugins) {
+                if (window.plugins.gaPlugin) {
+                    window.plugins.gaPlugin.init(functionconsole, functionconsole, "Project ID", 10);
+                    window.plugins.gaPlugin.trackPage(functionconsole, functionconsole, text);
+                }
+            }
+        }
+    </script>
+
 
 </head>
 
